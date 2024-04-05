@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+body {
+	background-color: var(--color1);
+}
+
 a,
 a:visited {
 	color: inherit;

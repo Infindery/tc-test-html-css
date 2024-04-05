@@ -4,11 +4,21 @@
 	border: 0.266667vw solid var(--color2);
 
 	display: flex;
+	align-items: center;
 }
 
 .header__logo {
 	width: 11.733334vw;
 	height: 11.733334vw;
+
+	display: flex;
+	margin-right: 52.533334vw;
+	margin-left: 3.733334vw;
+}
+
+.header__logo img {
+	width: 100%;
+	height: 100%;
 }
 
 .header__nav {
@@ -19,9 +29,19 @@
 	width: 16vw;
 	height: calc(16vw - 0.266667vw);
 	border-left: 0.266667vw solid var(--color2);
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header__burger {
 	width: 4.168vw;
+	height: 3.666667vw;
+}
+
+.header__search {
 	width: 4.168vw;
+	height: 4.168vw;
 }
