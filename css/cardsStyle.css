@@ -111,3 +111,110 @@
 	display: flex;
 	align-items: center;
 }
+
+@media screen and (min-width: 376px) {
+	.cards {
+		width: 89.583333vw;
+	
+		margin-top: 4.166667vw;
+	}
+	
+	.cards__title {
+		margin-bottom: 4.166667vw;
+	}
+	
+	.card {
+		width: 45.572917vw;
+		height: 11.71875vw;
+		font-size: 0.625vw;
+
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.card__border {
+		width: 45.052083vw;
+		height: 11.71875vw;
+		border: 0.052083vw solid var(--color2);
+	}
+	
+	.card__firstPart {
+		display: flex;
+	}
+	
+	.card__imageBlock {
+		width: 17.1875vw;
+		height: 11.71875vw;
+	}
+	
+	.card__degrees {
+		width: 2.8125vw;
+		height: 1.458333vw;
+		font-size: 0.833333vw;
+	}
+	
+	.card__image {
+		width: 17.1875vw;
+		height: 11.71875vw;
+	}
+	
+	.card__line {
+		width: 0.520833vw;
+		height: 11.71875vw;
+	}
+	
+	.card__secondPart {
+		width: 27.864583vw;
+		order: -1;
+
+		padding: 1.5625vw;
+	}
+	
+	.card__title {
+		height: 1.5625vw;
+		line-height: 125%;
+	
+		margin-bottom: 5px;
+	}
+	
+	.card__subtitle {
+		height: 0.9375vw;
+		font-size: 0.833333vw;
+	
+		margin-bottom: 2.34375vw;
+	}
+	
+	.card__duration {
+		height: 0.78125vw;
+		font-size: 0.625vw;
+	
+		margin-bottom: 0.78125vw;
+	}
+	
+	.card__durationIcon {
+		width: 0.625vw;
+		height: 0.625vw;
+	
+		margin: 0.078125vw 0.598958vw 0.078125vw 0.078125vw;
+	}
+	
+	.card__duration p, .card__cost p {
+		height: 0.729166vw;
+	}
+	
+	.card__costIcon {
+		width: 0.625vw;
+		height: 0.546875vw;
+	
+		margin: 0.117188vw 0.598958vw 0.117188vw 0.078125vw;
+	}
+	
+	.card__cost {
+		height: 0.729167vw;
+		font-size: 0.625vw;
+	}
+
+	.card:not(:last-child) .card__border {
+		border-bottom: none;
+	}
+}
