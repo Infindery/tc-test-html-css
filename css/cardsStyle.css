@@ -1,0 +1,113 @@
+.cards {
+	width: 90.666667vw;
+
+	margin-top: 32.266667vw;
+}
+
+.cards__title {
+	margin-bottom: 21.333334vw;
+}
+
+.card {
+	width: 90.666667vw;
+	height: 94.666667vw;
+	font-size: 2.666667vw;
+	font-weight: 400;
+}
+
+.card__border {
+	width: 90.666667vw;
+	height: 94.666667vw;
+	border: 0.266665vw solid var(--color2);
+
+	position: absolute;
+	z-index: -1;
+}
+
+.card__firstPart {
+	display: flex;
+}
+
+.card__imageBlock {
+	width: 88vw;
+	height: 50.666667vw;
+}
+
+.card__degrees {
+	width: 14.4vw;
+	height: 7.466667vw;
+	background-color: rgb(251, 226, 0);
+	font-size: 4.266667vw;
+	font-weight: 700;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.card__image {
+	width: 88vw;
+	height: 50.666667vw;
+}
+
+.card__line {
+	width: 2.666667vw;
+	height: 50.666667vw;
+	background-color: rgb(117, 59, 189);
+}
+
+.card__secondPart {
+	padding: 5.333333vw 5.066667vw 5.066667vw 5.066667vw;
+}
+
+.card__title {
+	height: 6.4vw;
+	line-height: 133%;
+
+	margin-bottom: 4.8vw;
+}
+
+.card__subtitle {
+	height: 4.8vw;
+	font-size: 4.266667vw;
+	font-weight: 500;
+	line-height: 115%;
+
+	margin-bottom: 8vw;
+}
+
+.card__duration {
+	height: 3.2vw;
+	line-height: 115%;
+
+	display: flex;
+	align-items: center;
+	margin-bottom: 2.933333vw;
+}
+
+.card__durationIcon {
+	width: 2.56vw;
+	height: 2.56vw;
+
+	margin: 0.32vw 2.986667vw 0.32vw 0.32vw;
+}
+
+.card__duration p, .card__cost p {
+	height: 2.933333vw;
+}
+
+.card__costIcon {
+	width: 2.56vw;
+	height: 2.24vw;
+
+	margin: 0.32vw 2.986667vw 0.32vw 0.32vw;
+}
+
+.card__cost {
+	height: 3.2vw;
+	line-height: 115%;
+
+	display: flex;
+	align-items: center;
+}

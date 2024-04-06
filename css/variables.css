@@ -21,3 +21,8 @@
     src: url("../fonts/Roboto-Regular.ttf") format("truetype");
     font-weight: 400;
 }
+
+main {
+	display: flex;
+	justify-content: center;
+}
