@@ -1,5 +1,6 @@
 .post {
 	width: 90.666667vw;
+	color: var(--font-color2);
 
 	margin-top: 21.333333vw;
 	margin-bottom: 41px;
@@ -37,6 +38,7 @@
 	width: 45.866667vw;
 
 	position: absolute;
+	z-index: -1;
 }
 
 .post__heading h3 {
@@ -68,7 +70,8 @@
 	font-size: 3.733333vw;
 	font-weight: 700;
 	line-height: 128%;
-	letter-spacing: 3.13%;
+	letter-spacing: 0.03em;
+	cursor: pointer;
 
 	display: flex;
 	justify-content: center;
@@ -117,6 +120,7 @@
 .post__arrowIcon {
 	width: 3.466667vw;
 	height: 3.466667vw;
+	cursor: pointer;
 }
 
 .post__image2 {
@@ -160,6 +164,7 @@
 	
 	.post__heading {
 		width: 25.572917vw;
+		z-index: 0;
 		
 		display: flex;
 		align-items: center;

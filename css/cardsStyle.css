@@ -1,11 +1,14 @@
 .cards {
 	width: 90.666667vw;
+	color: var(--font-color2);
 
 	margin-top: 32.266667vw;
 }
 
 .cards__title {
-	/* height: 46px; */
+	height: 12.266667;
+	line-height: 100%;
+	
 	margin-bottom: 21.333334vw;
 }
 
@@ -74,6 +77,7 @@
 	font-size: 4.266667vw;
 	font-weight: 500;
 	line-height: 115%;
+	letter-spacing: 0.03em;
 
 	margin-bottom: 8vw;
 }
@@ -113,6 +117,10 @@
 	align-items: center;
 }
 
+.card:not(:last-child) .card__border {
+	border-bottom: none;
+}
+
 @media screen and (min-width: 768px) {
 	.cards {
 		width: 89.583333vw;
@@ -121,6 +129,9 @@
 	}
 	
 	.cards__title {
+		height: 2.395834vw;
+		line-height: 100%;
+
 		margin-bottom: 4.166667vw;
 	}
 	

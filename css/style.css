@@ -6,8 +6,8 @@
 
 body {
 	font-family: "Roboto", sans-serif;
-	background-color: var(--color1);
 	color: var(--font-color1);
+	background-color: var(--color1);
 }
 
 a,
