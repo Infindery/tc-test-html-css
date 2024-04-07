@@ -5,6 +5,7 @@
 }
 
 .cards__title {
+	/* height: 46px; */
 	margin-bottom: 21.333334vw;
 }
 
@@ -112,7 +113,7 @@
 	align-items: center;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 768px) {
 	.cards {
 		width: 89.583333vw;
 	
