@@ -156,6 +156,7 @@
 	
 	.post__content {
 		width: 52.5vw;
+		background-color: var(--color4);
 	
 		padding: 4.166667vw 4.375vw;
 	}
