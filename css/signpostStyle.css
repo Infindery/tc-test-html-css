@@ -28,6 +28,7 @@
 
 .post__content {
 	width: 73.333333vw;
+	background-color: var(--color4);
 
 	display: flex;
 	flex-direction: column;
@@ -156,7 +157,6 @@
 	
 	.post__content {
 		width: 52.5vw;
-		background-color: var(--color4);
 	
 		padding: 4.166667vw 4.375vw;
 	}
