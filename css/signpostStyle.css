@@ -1,11 +1,12 @@
 .post {
-	width: 340px;
+	width: 90.666667vw;
 
-	margin-top: 80px;
+	margin-top: 21.333333vw;
+	margin-bottom: 41px;
 }
 
 .post__title {
-	margin-bottom: 80px;
+	margin-bottom: 21.333333vw;
 }
 
 .post__container {
@@ -13,85 +14,96 @@
 }
 
 .post__image1 {
-	width: 50px;
-	height: 392px;
+	width: 13.333333vw;
+	height: 104.533333vw;
 	object-fit: cover;
 }
 
 .post__line {
-	width: 15px;
-	height: 392px;
+	width: 4vw;
+	height: 104.533333vw;
 	background-color: rgb(5, 195, 222);
 }
 
 .post__content {
-	width: 275px;
+	width: 73.333333vw;
 
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
+	padding: 8vw;
 }
 
 .post__heading {
-	width: 172px;
+	width: 45.866667vw;
 
-	margin-bottom: 20px;
+	position: absolute;
 }
 
 .post__heading h3 {
-	height: 26px;
-	list-style: 100%;
+	height: 6.933333vw;
+	line-height: 100%;
 
-	margin-bottom: 10px;
+	margin-bottom: 2.666667vw;
 }
 
-.post__heading p {
-	font-size: 12px;
+.post__content p {
+	font-size: 3.2vw;
 	font-weight: 500;
 	line-height: 157%;
-	letter-spacing: 3.15%;
+	letter-spacing: 3.13%;
 	color: var(--color3);
+
+	margin-top: 9.6vw;
+	margin-bottom: 5.333333vw;
+}
+
+.post__dash {
+	display: none;
 }
 
 .post__btn {
-	width: 215px;
-	height: 48px;
-	border: 1px solid var(--color2);
-	font-size: 14px;
+	width: 57.333333vw;
+	height: 12.8vw;
+	border: 0.266667vw solid var(--color2);
+	font-size: 3.733333vw;
 	font-weight: 700;
-	line-height: 129%;
+	line-height: 128%;
 	letter-spacing: 3.13%;
-	order: 4;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 69.066667vw;
 }
 
 .post__event {
-	border-bottom: 1px solid var(--color2);
+	border-bottom: 0.266667vw solid var(--color2);
 
 	display: flex;
 	align-items: flex-start;
-	padding-bottom: 10px;
-	margin-bottom: 15px;
+	padding-bottom: 2.666667vw;
+	margin-bottom: 4vw;
 }
 
 .post__event:last-child {
-	margin-bottom: 20px;
+	margin-bottom: 5.333333vw;
 }
 
 .post__eventIcon {
-	width: 20px;
-	height: 20px;
+	width: 5.333333vw;
+	height: 5.333333vw;
 
-	margin-right: 15px;
+	margin-right: 4vw;
 }
 
 .post__text {
-	width: 157px;
-	font-size: 16px;
+	width: 41.866667vw;
+	font-size: 4.266667vw;
 	font-weight: 500;
 	line-height: 138%;
 	color: var(--font-color2);
 
-	margin-right: 10px;
+	margin-right: 2.666667vw;
 }
 
 .post__text span:first-child {
@@ -103,10 +115,140 @@
 }
 
 .post__arrowIcon {
-	width: 13px;
-	height: 13px;
+	width: 3.466667vw;
+	height: 3.466667vw;
 }
 
 .post__image2 {
 	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.post {
+		width: 89.583333vw;
+	
+		margin-top: 4.166667vw;
+		margin-bottom: 5.208333vw;
+	}
+	
+	.post__title {
+		margin-bottom: 4.166667vw;
+	}
+	
+	.post__container {
+		display: flex;
+	}
+	
+	.post__image1 {
+		width: 26.25vw;
+		height: 20.46875vw;
+		object-fit: cover;
+	}
+	
+	.post__line {
+		width: 2.083333vw;
+		height: 20.46875vw;
+		background-color: rgb(5, 195, 222);
+		order: 4;
+	}
+	
+	.post__content {
+		width: 52.5vw;
+	
+		padding: 4.166667vw 4.375vw;
+	}
+	
+	.post__heading {
+		width: 25.572917vw;
+		
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-bottom: 1.5625vw;
+	}
+	
+	.post__heading h3 {
+		height: 2.395833vw;
+		line-height: 100%;
+
+		margin-bottom: 0px;
+	}
+
+	.post__dash {
+		width: 2.083333vw;
+		height: 0.104167vw;
+		background-color: var(--color2);
+
+		display: block;
+		margin: 0px 0.885417vw;
+	}
+	
+	.post__content p {
+		font-size: 0.729167vw;
+		font-weight: 500;
+		line-height: 157%;
+		letter-spacing: 0.03em;
+		color: var(--color3);
+		margin-top: 0px;
+		margin-bottom: 1.5625vw;
+	}
+	
+	.post__btn {
+		width: 5.833333vw;
+		height: 0.9375vw;
+		border: none;
+		font-size: 0.729167vw;
+		font-weight: 700;
+		line-height: 128%;
+		letter-spacing: 0.03em;
+
+		margin-top: 0px;
+	}
+	
+	.post__event {
+		width: 43.75vw;
+		border-bottom: 0.052083vw solid var(--color2);
+	
+		display: flex;
+		align-items: flex-start;
+		padding-bottom: 1.25vw;
+		margin-bottom: 0.78125vw;
+	}
+	
+	.post__event:last-child {
+		margin-bottom: 0px;
+	}
+	
+	.post__eventIcon {
+		width: 1.041667vw;
+		height: 1.041667vw;
+	
+		margin-right: 0.78125vw;
+	}
+	
+	.post__text {
+		width: 35.78125vw;
+		font-size: 0.9375vw;
+		font-weight: 500;
+		line-height: 100%;
+		color: var(--font-color2);
+		
+		margin-right: 4.6875vw;
+	}
+	
+	.post__text span:last-child {
+		display: inline;
+	}
+	
+	.post__arrowIcon {
+		width: 0.677083vw;
+		height: 0.677083vw;
+	}
+	
+	.post__image2 {
+		width: 8.75vw;
+		height: 20.46875vw;
+
+		display: block;
+	}
 }
