@@ -12,7 +12,7 @@ class Game {
         this.gameScoreTable = new Map();
     }
 
-	getCurrentTotalScore() {
+	public getCurrentTotalScore() {
 		if (this.gameScoreTable.size <= 0) {
 			return 0;
 		}
