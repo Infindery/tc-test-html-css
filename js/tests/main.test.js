@@ -17,3 +17,11 @@ test("Getting a previous frameScore with an empty table", () => {
 
 	expect(game.getPreviousFrameScore()).toBe(-1);
 });
+
+test("Recording the result in gameScoreTable", () => {
+	const game = new Game();
+
+	expect(game.recordingResultToFrame(1, 5)).toBe(0);
+	expect(game.gameScoreTable.size).toBe(1);
+	expect(game.gameScoreTable.get(1).result).toBe([5]);
+});
