@@ -1,6 +1,6 @@
 interface frameObject {
 	frame: number,
-	result: number[] | string[],
+	result: (number | string)[],
 	frameScore: number,
 	totalScore: number
 }
@@ -52,6 +52,14 @@ class Game {
             if (this.gameScoreTable.has(numberOfFrame - 1)) {
                 frame.totalScore = this.gameScoreTable.get(numberOfFrame - 1).totalScore;
             }
+        }
+
+		if (valueOfFrame === 10) {
+            frame.result.push("X");
+        } else if (frame.frameScore + valueOfFrame === 10) {
+            frame.result.push("/");
+        } else {
+            frame.result.push(valueOfFrame);
         }
 
         frame.frameScore += valueOfFrame;

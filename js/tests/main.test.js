@@ -23,5 +23,5 @@ test("Recording the result in gameScoreTable", () => {
 
 	expect(game.recordingResultToFrame(1, 5)).toBe(0);
 	expect(game.gameScoreTable.size).toBe(1);
-	expect(game.gameScoreTable.get(1).result).toBe([5]);
+	expect(game.gameScoreTable.get(1).result).toEqual([5]);
 });
