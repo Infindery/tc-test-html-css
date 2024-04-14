@@ -7,9 +7,11 @@ interface frameObject {
 
 class Game {
 	private gameScoreTable: Map<number, frameObject>;
+	private pointsAccuralQueue: number[][];
 
 	constructor() {
         this.gameScoreTable = new Map();
+		this.pointsAccuralQueue = [];
     }
 
 	public getCurrentTotalScore() {
@@ -35,6 +37,26 @@ class Game {
 
 		return this.gameScoreTable.get(this.gameScoreTable.size - 1).frameScore;
 	}
+
+	updateFrameAndTotalScore(valueOfFrame: number): number {
+        for (let i = 0; i < this.pointsAccuralQueue.length; i++) {
+            let frame: frameObject = this.gameScoreTable.get(this.pointsAccuralQueue[i][0]);
+            frame.frameScore += valueOfFrame;
+
+            for (let z = this.pointsAccuralQueue[i][0]; z <= this.gameScoreTable.size; z++) {
+                this.gameScoreTable.get(z).totalScore += valueOfFrame;
+            }
+
+            this.pointsAccuralQueue[i][1] -= 1;
+            if (this.pointsAccuralQueue[i][1] <= 0) {
+                this.pointsAccuralQueue.splice(i, 1);
+				i--;
+            }
+        }
+
+        return 0;
+    }
+
 
 	private recordingResultToFrame(numberOfFrame: number, valueOfFrame: number) {
         let frame: frameObject;
