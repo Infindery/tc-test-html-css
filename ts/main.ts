@@ -5,3 +5,5 @@ class Game {
         this.gameScoreTable = new Map();
     }
 }
+
+module.exports = Game;
