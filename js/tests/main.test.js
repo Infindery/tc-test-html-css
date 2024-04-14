@@ -238,8 +238,8 @@ test("Option 3", () => {
 	expect(game.getPreviousFrameScore()).toBe(6);
 
 	expect(game.throwDistribution(1)).toBe(0);
-	expect(game.getCurrentTotalScore()).toBe(102);
-	expect(game.gameScoreTable.get(10).totalScore).toBe(102);
+	expect(game.getCurrentTotalScore()).toBe(101);
+	expect(game.gameScoreTable.get(10).totalScore).toBe(101);
 	expect(game.getPreviousFrameResult()).toEqual([2, 4]);
 	expect(game.getPreviousFrameScore()).toBe(6);
 });

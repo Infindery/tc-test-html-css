@@ -87,14 +87,14 @@ class Game {
         return 0;
     }
     // Метод, который контролирует распределение бросков, обновление фреймов с strike/spear, а также отслеживает 
-    // конец игры (достижение 3-го броска в 10 фрейме) и препятствует дальнейшей записи значений
+    // конец игры (достижение 3-го броска в 10 фрейме, либо 11 фремйа) и препятствует дальнейшей записи значений
     //
     // При вызове метода значение currentFrame увеличивается на 1, исключением являются случаи, когда во фрейме был
     // произведён 1 бросок и 10 фрейм. в этих случаях перед окончанием метода значение currentFrame уменьшается на 1, чтобы
     // при следующем запуске оказаться вновь в нужном фрейме
     throwDistribution(valueOfFrame) {
         // Условие, которое препятствует дальнейшей записи бросков в случае достижения конца игры (3-го броска в 10 фрейме)
-        if (this.gameScoreTable.has(10) && this.gameScoreTable.get(10).result.length === 3) {
+        if ((this.gameScoreTable.has(10) && this.gameScoreTable.get(10).result.length === 3) || this.currentFrame === 11) {
             return -1;
         }
         this.currentFrame += 1;
@@ -104,6 +104,12 @@ class Game {
             if (this.gameScoreTable.get(this.currentFrame).frameScore + valueOfFrame === 10) {
                 if (this.currentFrame !== 10) {
                     this.pointsAccuralQueue.push([this.currentFrame, 1]);
+                }
+            }
+            // Условие выхода из метода в случае попытки добавления 3 броска во фрейм без strike/spear
+            if (this.gameScoreTable.get(this.currentFrame).result.length === 2) {
+                if (this.gameScoreTable.get(this.currentFrame).frameScore < 10) {
+                    return 0;
                 }
             }
             this.recordingResultToFrame(this.currentFrame, valueOfFrame);
