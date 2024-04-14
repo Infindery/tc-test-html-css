@@ -11,3 +11,9 @@ test("Getting a previous result with an empty table", () => {
 
 	expect(game.getPreviousFrameResult()).toBe(-1);
 });
+
+test("Getting a previous frameScore with an empty table", () => {
+	const game = new Game();
+
+	expect(game.getPreviousFrameScore()).toBe(-1);
+});
