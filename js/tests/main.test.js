@@ -28,6 +28,7 @@ test("Recording the result in gameScoreTable", () => {
 
 test("Update frameScore and totalScore in frames with strike/spear", () => {
 	const game = new Game();
+	game.pointsAccuralQueue = [[1, 1], [2, 1], [3, 1]];
 
 	expect(game.recordingResultToFrame(1, 5)).toBe(0);
 	expect(game.recordingResultToFrame(2, 2)).toBe(0);
@@ -53,9 +54,9 @@ test("Adding throws to the table", () => {
 	expect(game.gameScoreTable.get(2).result).toEqual([5, "/"]);
 	expect(game.gameScoreTable.get(3).result).toEqual([2, 1]);
 	expect(game.gameScoreTable.get(1).frameScore).toBe(20);
-	expect(game.gameScoreTable.get(1).frameScore).toBe(12);
-	expect(game.gameScoreTable.get(1).frameScore).toBe(3);
+	expect(game.gameScoreTable.get(2).frameScore).toBe(12);
+	expect(game.gameScoreTable.get(3).frameScore).toBe(3);
 	expect(game.gameScoreTable.get(1).totalScore).toBe(20);
 	expect(game.gameScoreTable.get(2).totalScore).toBe(32);
-	expect(game.gameScoreTable.get(2).totalScore).toBe(35);
+	expect(game.gameScoreTable.get(3).totalScore).toBe(35);
 });
