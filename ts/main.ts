@@ -35,6 +35,30 @@ class Game {
 
 		return this.gameScoreTable.get(this.gameScoreTable.size - 1).frameScore;
 	}
+
+	private recordingResultToFrame(numberOfFrame: number, valueOfFrame: number) {
+        let frame: farmeObject;
+
+        if (this.gameScoreTable.has(numberOfFrame)) {
+            frame = this.gameScoreTable.get(numberOfFrame);
+        } else {
+            frame = this.gameScoreTable.set(numberOfFrame, {
+                frame: numberOfFrame,
+                result: [],
+                frameScore: 0,
+                totalScore: 0
+            }).get(numberOfFrame);
+
+            if (this.gameScoreTable.has(numberOfFrame - 1)) {
+                frame.totalScore = this.gameScoreTable.get(numberOfFrame - 1).totalScore;
+            }
+        }
+
+        frame.frameScore += valueOfFrame;
+        frame.totalScore += valueOfFrame;
+
+        return 0;
+    }
 }
 
 module.exports = Game;
