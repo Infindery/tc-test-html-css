@@ -38,7 +38,7 @@ class Game {
 		return this.gameScoreTable.get(this.gameScoreTable.size - 1).frameScore;
 	}
 
-	updateFrameAndTotalScore(valueOfFrame: number): number {
+	public updateFrameAndTotalScore(valueOfFrame: number): number {
         for (let i = 0; i < this.pointsAccuralQueue.length; i++) {
             let frame: frameObject = this.gameScoreTable.get(this.pointsAccuralQueue[i][0]);
             frame.frameScore += valueOfFrame;
