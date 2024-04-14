@@ -27,6 +27,14 @@ class Game {
 
 		return this.gameScoreTable.get(this.gameScoreTable.size - 1).result;
 	}
+
+	public getPreviousFrameScore() {
+		if (!this.gameScoreTable.has(this.gameScoreTable.size - 1)) {
+			return -1;
+		}
+
+		return this.gameScoreTable.get(this.gameScoreTable.size - 1).frameScore;
+	}
 }
 
 module.exports = Game;
