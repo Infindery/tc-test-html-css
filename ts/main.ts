@@ -1,4 +1,4 @@
-interface farmeObject {
+interface frameObject {
 	frame: number,
 	result: number[] | string[],
 	frameScore: number,
@@ -6,7 +6,7 @@ interface farmeObject {
 }
 
 class Game {
-	private gameScoreTable: Map<number, farmeObject>;
+	private gameScoreTable: Map<number, frameObject>;
 
 	constructor() {
         this.gameScoreTable = new Map();
@@ -37,7 +37,7 @@ class Game {
 	}
 
 	private recordingResultToFrame(numberOfFrame: number, valueOfFrame: number) {
-        let frame: farmeObject;
+        let frame: frameObject;
 
         if (this.gameScoreTable.has(numberOfFrame)) {
             frame = this.gameScoreTable.get(numberOfFrame);
