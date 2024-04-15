@@ -95,16 +95,16 @@ class Game {
                 frame.totalScore = this.gameScoreTable.get(numberOfFrame - 1).totalScore;
             }
         }
-
+		
 		if (valueOfFrame === 10) {
-            frame.result.push("X");
-        } else if (frame.frameScore + valueOfFrame === 10) {
-            frame.result.push("/");
+			frame.result.push("X");
+		} else if (frame.frameScore + valueOfFrame === 10) {
+			frame.result.push("/");
 		} else if (valueOfFrame === 0) {
 			frame.result.push("-");
 		} else {
-            frame.result.push(valueOfFrame);
-        }
+			frame.result.push(valueOfFrame);
+		}
 
         frame.frameScore += valueOfFrame;
         frame.totalScore += valueOfFrame;
