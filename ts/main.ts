@@ -119,15 +119,37 @@ class Game {
 	// произведён 1 бросок и 10 фрейм. в этих случаях перед окончанием метода значение currentFrame уменьшается на 1, чтобы
 	// при следующем запуске оказаться вновь в нужном фрейме
 	public throwDistribution(valueOfFrame: number) {
-		// Условие, которое препятствует дальнейшей записи бросков в случае достижения конца игры (3-го броска в 10 фрейме),
-		// а также проверяет тип и значение переданного значения valueOfFrame
+		// Условие, которое препятствует дальнейшей записи бросков в случае достижения конца игры (3-го броска в 10 фрейме)
 		if (this.gameScoreTable.has(10) && this.gameScoreTable.get(10).result.length === 3) {
 			return -1;
-		} else if (typeof valueOfFrame !== "number" || valueOfFrame < 0 || valueOfFrame > 10) {
+		}
+		
+		if (typeof valueOfFrame !== "number" || valueOfFrame < 0 || valueOfFrame > 10) {
 			return -1;
 		}
 
 		this.currentFrame += 1;
+
+		// Проверки.
+		if (this.gameScoreTable.has(this.currentFrame)) {
+			// В случае, если переданное значение превышает число доступных кегель,
+			// запись не будет произведена.
+			if (this.gameScoreTable.get(this.currentFrame).result.length === 1) {
+				if (this.gameScoreTable.get(this.currentFrame).result[0] !== "X") {
+					if (this.gameScoreTable.get(this.currentFrame).frameScore + valueOfFrame > 10) {
+						this.currentFrame -= 1;
+						return -1;
+					}
+				}
+			}
+
+			// Условие выхода из метода в случае попытки добавления 3 броска во фрейм без strike/spear
+			if (this.gameScoreTable.get(this.currentFrame).result.length === 2) {
+				if (this.gameScoreTable.get(this.currentFrame).frameScore < 10) {
+					return -1;
+				}
+			}
+		}
 
 		this.updateFrameAndTotalScore(valueOfFrame);
 
@@ -138,13 +160,6 @@ class Game {
 					this.pointsAccuralQueue.push([this.currentFrame, 1]);
 				}
             }
-
-			// Условие выхода из метода в случае попытки добавления 3 броска во фрейм без strike/spear
-			if (this.gameScoreTable.get(this.currentFrame).result.length === 2) {
-				if (this.gameScoreTable.get(this.currentFrame).frameScore < 10) {
-					return -1;
-				}
-			}
 
 			this.recordingResultToFrame(this.currentFrame, valueOfFrame);
 

@@ -263,3 +263,42 @@ test("Option 4", () => {
 	expect(game.getPreviousFrameScore()).toBe(5);
 	expect(game.throwDistribution(11)).toBe(-1);
 });
+
+test("Option 5", () => {
+	const game = new Game();
+
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(7)).toBe(0);
+	expect(game.throwDistribution(7)).toBe(-1);
+	expect(game.throwDistribution(3)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(3)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(-1);
+	expect(game.throwDistribution(7)).toBe(0);
+	expect(game.throwDistribution(7)).toBe(0);
+});
+
+test("Option 6", () => {
+	const game = new Game();
+
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(10)).toBe(0);
+	expect(game.throwDistribution(11)).toBe(-1);
+	expect(game.throwDistribution(3)).toBe(0);
+	expect(game.throwDistribution(7)).toBe(0);
+	expect(game.getCurrentTotalScore()).toBe(283);
+});
