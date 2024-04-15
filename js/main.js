@@ -101,7 +101,7 @@ class Game {
         if (this.gameScoreTable.has(10) && this.gameScoreTable.get(10).result.length === 3) {
             return -1;
         }
-        else if (typeof valueOfFrame !== "number" || valueOfFrame < 0) {
+        else if (typeof valueOfFrame !== "number" || valueOfFrame < 0 || valueOfFrame > 10) {
             return -1;
         }
         this.currentFrame += 1;

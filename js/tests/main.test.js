@@ -261,4 +261,5 @@ test("Option 4", () => {
 	expect(game.gameScoreTable.get(2).totalScore).toBe(6);
 	expect(game.getPreviousFrameResult()).toEqual([5, "-"]);
 	expect(game.getPreviousFrameScore()).toBe(5);
+	expect(game.throwDistribution(11)).toBe(-1);
 });
