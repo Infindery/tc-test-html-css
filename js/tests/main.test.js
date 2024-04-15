@@ -250,8 +250,15 @@ test("Option 4", () => {
 	expect(game.throwDistribution("1")).toBe(-1);
 	expect(game.throwDistribution(-1)).toBe(-1);
 	expect(game.throwDistribution(5)).toBe(0);
+	expect(game.throwDistribution(0)).toBe(0);
 	expect(game.getCurrentTotalScore()).toBe(5);
 	expect(game.gameScoreTable.get(1).totalScore).toBe(5);
 	expect(game.getPreviousFrameResult()).toBe(-1);
 	expect(game.getPreviousFrameScore()).toBe(-1);
+
+	expect(game.throwDistribution(1)).toBe(0);
+	expect(game.getCurrentTotalScore()).toBe(6);
+	expect(game.gameScoreTable.get(2).totalScore).toBe(6);
+	expect(game.getPreviousFrameResult()).toEqual([5, "-"]);
+	expect(game.getPreviousFrameScore()).toBe(5);
 });

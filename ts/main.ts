@@ -100,7 +100,9 @@ class Game {
             frame.result.push("X");
         } else if (frame.frameScore + valueOfFrame === 10) {
             frame.result.push("/");
-        } else {
+		} else if (valueOfFrame === 0) {
+			frame.result.push("-");
+		} else {
             frame.result.push(valueOfFrame);
         }
 

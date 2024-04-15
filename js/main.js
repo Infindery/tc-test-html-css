@@ -79,6 +79,9 @@ class Game {
         else if (frame.frameScore + valueOfFrame === 10) {
             frame.result.push("/");
         }
+        else if (valueOfFrame === 0) {
+            frame.result.push("-");
+        }
         else {
             frame.result.push(valueOfFrame);
         }
